@@ -1,5 +1,5 @@
 const express = require('express');
-const mongoose = require('mongoose');
+const connectDB = require('./config/database'); // Import the connectDB function
 const bugRoutes = require('./routes/bugRoutes');
 const commentRoutes = require('./routes/commentRoutes');
 
@@ -9,15 +9,7 @@ const app = express();
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/bugTracker', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('Connected to MongoDB');
-}).catch((error) => {
-  console.error('Failed to connect to MongoDB:', error);
-  process.exit(1); // Exit with failure
-});
+connectDB(); // Call the connectDB function
 
 // Routes
 app.use('/api', bugRoutes);
