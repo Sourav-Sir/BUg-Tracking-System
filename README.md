@@ -2,7 +2,7 @@
 
 BugTracker is a web application for software development teams to manage and track software bugs efficiently. It provides features for reporting bugs, tracking their status, and facilitating collaboration among team members to resolve issues.
 
-<!-- ![BugTracker Screenshot](./images/screenshot.png) -->
+![BugTracker Screenshot](https://github.com/Sourav-Sir/BUg-Tracking-System/blob/master/image.png)
 
 ## Features
 
